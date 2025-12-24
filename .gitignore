@@ -7,8 +7,11 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-.env
-node_modules
+# התעלמות מכל תיקיית node_modules בכל מקום בפרויקט
+**/node_modules/
+
+# התעלמות מכל קובץ .env בכל מקום בפרויקט
+**/.env
 dist
 dist-ssr
 *.local
