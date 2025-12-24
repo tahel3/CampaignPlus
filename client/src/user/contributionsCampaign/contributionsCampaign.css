@@ -1,0 +1,174 @@
+body {
+    font-family: "Assistant", sans-serif;
+    direction: rtl;
+    background-color: #f9fafb;
+    margin: 0;
+  }
+  
+  .campaign-page {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .campaign-hero {
+    text-align: center;
+  }
+  
+  .campaign-image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  .donation-section {
+    margin-top: 25px;
+  }
+  
+  .donation-options {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 15px;
+  }
+  
+  .donate-amount {
+    padding: 10px 20px;
+    background-color: #6a1b9a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .donate-amount.selected {
+    background-color: #9c27b0;
+  }
+  
+  .payment-form input,
+  #customAmount,
+  #dedication {
+    width: 100%;
+    padding: 10px;
+    margin: 8px
+  }  
+
+  .donation-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .donation-btn {
+    background-color: #6a1b9a;  /* סגול */
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+  
+  /* אפקט ריחוף */
+  .donation-btn:hover {
+    transform: scale(1.07);
+    background-color: #8e24aa;
+  }
+  
+  /* כפתור שנבחר */
+  .donation-btn.selected {
+    background-color: #4a148c;
+    box-shadow: 0 0 10px #4a148c;
+    transform: scale(1.2);
+  }
+  .payment-section {
+    max-width: 320px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .payment-section input {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .payment-section input.invalid {
+    border-color: red;
+    background-color: #ffe6e6;
+  }
+  .campaign-stats { margin-top: 12px; }
+  .stats-row { display:flex; justify-content:space-between; margin-bottom:8px; gap:12px; }
+  .progress-bar-wrap { width:100%; height:10px; background:#eee; border-radius:999px; overflow:hidden; }
+  .progress-bar { height:100%; width:0%; background:#2bb673; transition:width .4s ease; }
+    
+  .recent-donations {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .donations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+  }
+  
+  .donation-card {
+    background: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .donation-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .donation-header {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 8px;
+  }
+  
+  .donation-amount {
+    font-size: 1.2rem;
+    color: #6a1b9a;
+    font-weight: bold;
+  }
+  
+  .donation-dedication {
+    font-size: 0.9rem;
+    color: #333;
+    margin-top: 6px;
+  }
+  
+  .load-more-btn {
+    margin-top: 20px;
+    background-color: #6a1b9a;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+  }
+  
+  .load-more-btn:hover {
+    background-color: #8e24aa;
+  }
+  

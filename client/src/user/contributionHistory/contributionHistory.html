@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campaign+ - היסטוריית תרומות</title>
+  <link rel="stylesheet" href="../../main/index.css">
+  <link rel="stylesheet" href="../campaigns/main.campaigns.css">
+  <link rel="stylesheet" href="./contributionHistory.css">
+  <script type="module" src="../../main/index.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false" type="button">
+        &#9776; </button>
+    <div class="logo">
+      <img src="http://localhost:3000/images/לוגו%20נבחר.png" alt="Campaign+ Logo">
+      <h1>Campaign+</h1>
+    </div>
+    <nav class="nav open" id="main-nav">
+      <a href="../../../index.html" target="_self">בית</a>
+      <a href="../details/details.html" target="_self">נתונים</a>
+      <a href="../login/login.html" id="login" target="_self">התחברות</a>
+      <a href="contributionHistory.html" class="active">היסטוריית תרומות שלי</a>
+      <a href="../../manager/index.html" target="_self">כניסת מנהל</a>
+      <a href="#" id="logout" style="display:none;">התנתקות</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <h2>היסטוריית התרומות שלי</h2>
+    <p>צפה בתרומות שביצעת וסנן לפי תאריך</p>
+  </section>
+  <section class="filter-container" style="text-align:center; margin-top:20px;">
+    <label for="filter-date">בחר תאריך:</label>
+    <input type="date" id="filter-date">
+    <button class="btn-reset" id="reset-btn">איפוס</button>
+  </section>
+  <div class="contribution-history" id="contributionHistory">
+  </div>
+  <footer class="footer">
+    <p>© כל הזכויות שמורות - Campaign+</p>
+  </footer>
+
+  <script type="module" src="./contributionHistory.js"></script>
+</body>
+</html>

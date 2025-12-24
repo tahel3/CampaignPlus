@@ -1,0 +1,441 @@
+.nav-welcome {
+    color: #4CAF50; 
+    font-size: 1rem;
+    font-weight: bold;
+    direction: rtl; 
+    padding: 8px 12px;
+    
+    /* מפריד קטן משאר הקישורים */
+    border-radius: 6px;
+    margin-left: 15px;
+    
+    /* ודא שהוא מופיע על אותה שורה עם הקישורים */
+    display: inline-block; 
+}
+/* Container for all campaign cards */
+.campaigns-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 350px));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+.page-wrapper {
+    display: flex; /* Flexbox עדיף לפריסה חד-ממדית כזו */
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    direction: rtl; 
+}
+/* איזור התוכן תופס את שאר המקום */
+.content-area {
+    flex: 1 1 auto;
+}
+.campaign-image {
+  width: 180px;        
+  height: 180px;      
+  object-fit: contain;  
+  display: block;
+  margin: 0 auto 10px auto;
+  background: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  
+}
+.campaign-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+}
+/* Individual campaign card styles */
+.campaign-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: right;
+    direction: rtl; /* For Hebrew text */
+}
+
+/* Hover effect */
+.campaign-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.campaign-header {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.campaign-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.campaign-description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Progress bar section */
+.campaign-progress {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 8px;
+    background-color: #e9e9e9;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-image: linear-gradient(to right, #4c68ff, #7f6eef); /* Blue from your header */
+    border-radius: 4px;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Call-to-action button */
+.campaign-button {
+    background-color: #ff8c00; /* Your orange color */
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.campaign-button:hover {
+    background-color: #e67e00;
+}
+/* Container for all campaign cards */
+#campaigns {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+    padding: 20px;
+    direction: rtl; /* יישור מימין לשמאל */
+}
+
+/* Individual campaign card */
+.campaign-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.campaign-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.campaign-details {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.campaign-header {
+    margin-bottom: 10px;
+}
+
+.campaign-title {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.campaign-description {
+    font-size: 1em;
+    color: #666;
+    margin: 5px 0 0;
+}
+
+/* Progress bar styles */
+.campaign-progress {
+    margin-top: 15px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #4caf50;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    font-weight: bold;
+    transition: width 0.4s ease;
+}
+
+/* Buttons styles */
+.campaign-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+
+.campaign-button:hover {
+    background-color: #0056b3;
+}
+
+/* Modal styles */
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: right;
+    direction: rtl;
+    position: relative;
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+}
+
+.modal-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.modal-content li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-content li:last-child {
+    border-bottom: none;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    flex-direction:left; /* ✅ מעביר את הסיידבר לצד ימין */
+    direction: rtl; /* לוודא שכל הטקסט מימין לשמאל */
+  }
+  
+  .filter-sidebar {
+    flex: 0 0 250px;
+    max-width: 250px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: right;
+    height: fit-content;
+    position: sticky; /* אפשרי: שיישאר גלוי בגלילה */
+    top: 20px;
+  }
+  
+  .category-filter select {
+    width: 100%;
+    min-height: 50px;
+    max-height: 120px;
+    overflow-y: auto;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    line-height: 1.4;
+    background: #fff;
+  }
+  
+  .clear-btn {
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px 0;
+    background: #ff8800;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .clear-btn:hover {
+    background: #e46e00;
+  }
+  
+  .content-area {
+    flex: 1 1 auto;
+  }
+  
+  /* רספונסיבי */
+  @media (max-width: 768px) {
+    .page-wrapper {
+      flex-direction: column;
+    }
+    .filter-sidebar {
+      width: 100%;
+      max-width: none;
+      margin-bottom: 20px;
+      position: static;
+    }
+}
+/* --- עיצוב מודאל היסטוריית תרומות משופר --- */
+
+/* מעצב את המודאל עצמו לרקע נקי יותר */
+.contribution-modal-content {
+    padding: 30px;
+    border-top: 5px solid #ff8c00; /* פס כתום למעלה */
+}
+
+.contribution-modal-content h3 {
+    font-size: 1.8em;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* רשימת התרומות - מחליפה את ה-<ul> */
+.contributions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* עיצוב כל פריט תרומה (כרטיס קטן) */
+.contribution-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.2s ease;
+}
+
+.contribution-item:hover {
+    background-color: #f0f0f0;
+}
+
+.donor-info {
+    flex-grow: 1;
+    text-align: right;
+    font-weight: bold;
+    color: #444;
+}
+
+.donor-name {
+    font-size: 1.1em;
+}
+
+.donation-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1em;
+}
+
+.donation-amount {
+    font-weight: bold;
+    color: #008000; /* ירוק לכסף */
+    padding: 2px 5px;
+    background: #e6ffe6;
+    border-radius: 4px;
+}
+
+.donation-date {
+    color: #777;
+    font-size: 0.9em;
+}
+
+.no-contributions {
+    text-align: center;
+    color: #999;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+}
+
+/* כפתור סגור במודאל */
+.close-modal-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px; /* שינוי מיקום לימין למען עברית */
+    left: auto;
+    font-size: 2em;
+    line-height: 1;
+    color: #333;
+}

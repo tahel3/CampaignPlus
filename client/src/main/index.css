@@ -1,0 +1,254 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #0077b6, #ff8800);
+    padding: 15px 40px;
+    color: white;
+    height: 180px; 
+  }
+  
+  .header .logo {
+    display: flex;
+    align-items: center;
+  }
+  script{
+      height: 700px;
+  }
+  .header .logo img {
+    height: 250px;
+    margin-left: 10px;
+    margin-top: 30px;
+  }
+  
+  .header .nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .header .nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hero */
+  .hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #00b4d8, #ff6f61);
+    color: white;
+  }
+  
+  .hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  .btn-primary {
+    background: #ff8800;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background: #ff6f61;
+  }
+  
+  /* Dashboard */
+  .dashboard {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin: 30px;
+    border-radius: 12px;
+  }
+  
+  .dashboard .stat {
+    text-align: center;
+  }
+  
+  .dashboard .stat h3 {
+    font-size: 2em;
+    color: #0077b6;
+  }
+  
+  .dashboard .stat p {
+    font-size: 1.1em;
+    color: #555;
+  }
+  
+  /* Create Campaign */
+  .create-campaign {
+    background: #fff;
+    padding: 40px;
+    margin: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .create-campaign h2 {
+    margin-bottom: 20px;
+    color: #0077b6;
+  }
+  
+  .create-campaign form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .create-campaign label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .create-campaign input,
+  .create-campaign textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+  }
+  
+  .create-campaign button {
+    margin-top: 20px;
+  }
+  
+  /* Login Page */
+  .login-container {
+    max-width: 400px;
+    margin: 80px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .login-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .login-container input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .btn-google {
+    background: #db4437;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .btn-google:hover {
+    background: #c23321;
+  }
+  
+  .login-container .links {
+    margin-top: 15px;
+  }
+  
+  .login-container .links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #0077b6;
+  }
+  
+  .login-container .links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer */
+  .footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+  }
+  .header .nav {
+    display: flex; 
+    align-items: center; 
+}
+.menu-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    z-index: 100; 
+}
+.create-campaign {
+    /* הקטנת המרווחים החיצוניים והפנימיים כדי לתת יותר מקום לתוכן */
+    margin: 15px; 
+    padding: 20px; 
+}
+
+/* ודא שכפתורי הפעולה ממלאים את הרוחב ומקבלים מרווח נוח */
+.create-campaign form #sendUpdate,
+.create-campaign form #deleteUser {
+    width: 100%; /* ממלא את כל רוחב הטופס */
+    /* הוספת מרווחים אנכיים בין הכפתורים */
+    margin-top: 10px; 
+    margin-bottom: 5px; 
+    box-sizing: border-box; /* מבטיח ש-padding לא יעוות את הרוחב */
+}
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto; 
+        padding: 15px 20px; 
+    }
+    .header .nav {
+        flex-direction: column;
+        width: 100%;
+        display: none; 
+    }
+    .header .nav a {
+        margin: 10px 0;
+    }
+    .menu-toggle {
+        display: block; 
+    }
+    .header .logo {
+        margin-bottom: 10px;
+    }
+    .header .nav.open {
+    display: flex !important; 
+    flex-direction: column;}
+
+}

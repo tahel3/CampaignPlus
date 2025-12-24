@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campaign+ - נתונים</title>
+  <link rel="stylesheet" href="../../main/index.css">
+  <script type="module" src="./details.js" defer></script>
+  <script type="module" src="../../main/index.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false" type="button">
+        &#9776; </button>
+    <div class="logo">
+      <img src="http://localhost:3000/images/לוגו%20נבחר.png" alt="Campaign+ Logo">
+      <h1>Campaign+</h1>
+    </div>
+    <nav class="nav open" id="main-nav">
+      <a href="../../index.html" target="_self" rel="noopener noreferrer">חזרה לאזור לקוח </a>
+      <a href="../users/users.html" target="_self" rel="noopener noreferrer">צפייה במשתמשים</a>
+      <a href="../addCampaign/addCampaign.html" target="_self" rel="noopener noreferrer">קמפיין חדש</a>
+      <a href="details.html" target="_self" rel="noopener noreferrer">נתונים</a>
+      <a href="../login/login.js" id="login" target="_self" rel="noopener noreferrer">התחברות</a>
+      <a href="../categories/categories.html" target="_self" rel="noopener noreferrer">ניהול קטגוריות</a>
+      <a href="#" id="logout" style="display:none;" target="_self" rel="noopener noreferrer">התנתקות</a>
+    </nav>
+  </header>
+
+  <section class="dashboard">
+    <div class="stats-cards">
+      <div class="card">
+        <h3>סך תרומות כולל</h3>
+        <p id="totalOverallDisplay">...</p>
+      </div>
+      <div class="card">
+        <h3>מספר קמפיינים פעילים:</h3>
+        <p>
+          <span id="numActive"></span>
+        </p>
+        <div class="card">
+          <h3>נאסף השבוע</h3>
+          <p id="totalWeeklyDisplay">...</p>
+        </div>
+        <div class="card">
+          <h3>נאסף היום</h3>
+          <p id="totalTodayDisplay">...</p>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <h2>מגמת תרומות שבועית</h2>
+        <canvas id="donationChart"></canvas>
+      </div>
+      <div class="stats-card">
+    <h2>🏆 עשרת התורמים הגדולים</h2>
+    <div id="topDonorsList">
+        </div>
+</div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Campaign+ - כל הזכויות שמורות</p>
+  </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+</html>

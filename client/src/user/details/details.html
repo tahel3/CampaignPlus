@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campaign+ - נתונים</title>
+  <link rel="stylesheet" href="../../main/index.css">
+  <script type="module" src="./details.js" defer></script>
+  <script type="module" src="../../main/index.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false" type="button">
+        &#9776; </button>
+    <div class="logo">
+      <img src="http://localhost:3000/images/לוגו%20נבחר.png" alt="Campaign+ Logo">
+      <h1>Campaign+</h1>
+    </div>
+    <nav class="nav open" id="main-nav">
+      <a href="../mainUser.html" target="_self" rel="noopener noreferrer">בית</a>
+      <a href="../details/details.html" target="_self" rel="noopener noreferrer">נתונים</a>
+      <a href="../login/login.html" id="login" target="_self" rel="noopener noreferrer">התחברות</a>
+      <a href="../contributionHistory/contributionHistory.html" target="_self" rel="noopener noreferrer">הסטורית תרומות
+        שלי</a>
+      <a href="../../manager/index.html" target="_self" rel="noopener noreferrer">כניסת מנהל</a>
+      <a href="#" id="logout" style="display:none;">התנתקות</a>
+    </nav>
+  </header>
+
+  <section class="dashboard">
+    <div class="stats-cards">
+      <div class="card">
+        <h3>מספר קמפיינים פעילים:</h3>
+        <p>
+          <span id="numActive"></span>
+        </p>
+        <div class="card">
+          <h3>נאסף השבוע</h3>
+          <p id="totalWeeklyDisplay">...</p>
+        </div>
+        <div class="card">
+          <h3>נאסף היום</h3>
+          <p id="totalTodayDisplay">...</p>
+        </div>
+      </div>
+      <div class="stats-card">
+    <h2>🏆 שלושת התורמים הגדולים</h2>
+    <div id="topDonorsList">
+        </div>
+</div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Campaign+ - כל הזכויות שמורות</p>
+  </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+
+</html>

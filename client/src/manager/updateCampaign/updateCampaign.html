@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campaign+ - יצירת קמפיין</title>
+  <link rel="stylesheet" href="../../main/index.css">
+  <script type="module" src="./updateCampaign.js" defer></script>
+  <script type="module" src="../../main/index.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false" type="button">
+        &#9776; </button>
+    <div class="logo">
+      <img src="http://localhost:3000/images/לוגו%20נבחר.png" alt="Campaign+ Logo">
+      <h1>Campaign+</h1>
+    </div>
+    <nav class="nav open" id="main-nav">
+      <a href="../index.html" target="_self" rel="noopener noreferrer">בית</a>
+      <a href="../addCampaign/addCampaign.html" target="_self" rel="noopener noreferrer">קמפיין חדש</a>
+      <a href="../users/users.html" target="_self" rel="noopener noreferrer">צפייה במשתמשים</a>
+      <a href="../details/details.html" id="login" target="_self" rel="noopener noreferrer">נתונים</a>
+      <a href="../login/login.html" target="_self" rel="noopener noreferrer">התחברות</a>
+      <a href="../categories/categories.html" target="_self" rel="noopener noreferrer">ניהול קטגוריות</a>
+      <a href="#" id="logout" style="display:none;">התנתקות</a>
+    </nav>
+  </header>
+
+  <section class="create-campaign">
+    <h2>עדכון קמפיין</h2>
+    <form id="campaignForm">
+      <label for="title">שם קמפיין</label>
+      <input type="text" id="title" name="title" placeholder="כותרת מרגשת" required>
+
+      <label for="dest">יעד </label>
+      <input type="number" id="dest" name="dest" required>
+
+      <label for="status">קמפיין גמיש </label>
+      <input type="checkbox" id="status" name="status">
+
+      <label for="dateStart">תאריך התחלה</label>
+      <input type="date" id="dateStart" name="dateStart">
+
+      <label for="dateEnd">תאריך סיום</label>
+      <input type="date" id="dateEnd" name="dateEnd">
+
+      <label for="category">קטגוריה</label>
+      <select id="category" multiple>
+        <option value="">-- בחר קטגוריה --</option>
+      </select>
+
+      <label for="description">תאור הקמפיין</label>
+      <textarea id="description" name="description" rows="4" placeholder="תיאור קצר..." required></textarea>
+
+      <label for="media">העלה תמונה/וידאו</label>
+      <input type="file" id="media" name="media" accept="image/*,video/*">
+
+      <button type="button" id="send" class="btn-primary">שמור</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Campaign+ - כל הזכויות שמורות</p>
+  </footer>
+</body>
+
+</html>

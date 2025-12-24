@@ -1,0 +1,128 @@
+#users {
+    /* משתמשים ב-Grid כדי לפרוס את הכרטיסים באופן גמיש */
+    display: grid;
+    /* יצירת עמודות שגודלן מינימלי הוא 300px, עם מעבר אוטומטי לשורה הבאה */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    /* רווח בין הכרטיסים */
+    padding: 20px;
+    max-width: 1000px;
+    margin: 30px auto;
+    justify-content: center;
+    /* ממורכז בדף */
+}
+.users-grid, #users {
+    flex: 1; /* תופס את כל הרוחב הנותר ומאפשר לו להתכווץ */
+    min-width: 0; /* קריטי! מאפשר ל-Flex Item להצטמק מעבר לגודל התוכן המקורי שלו */
+    
+}
+
+/* 2. עיצוב כרטיס משתמש בודד */
+.user-card {
+    /* העיצוב הנקי: רקע לבן/בהיר, צל עדין ומעוגל */
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    /* צל עדין */
+    padding: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* אפקט ריחוף (Hover) לעיצוב אינטראקטיבי */
+.user-card:hover {
+    transform: translateY(-5px);
+    /* מורם מעט */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    /* צל מודגש יותר */
+}
+
+/* 3. עיצוב כותרת ופרטי משתמש */
+.user-card h3 {
+    direction: rtl;
+    font-size: 1.4em;
+    color: var(--primary-color, #007bff);
+    /* שימוש בצבע ראשי מהאתר שלך */
+    border-bottom: 2px solid #f0f0f0;
+    /* קו הפרדה דק */
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+
+.user-card p {
+    direction: rtl;
+    font-size: 1em;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+/* 4. הדגשת תפקיד ותרומות */
+.user-card p:nth-child(3) {
+    /* תפקיד (Role) */
+    font-weight: bold;
+}
+
+.user-card p:last-child {
+    /* מספר תרומות */
+    color: #28a745;
+    /* צבע ירוק להדגשת נתון חיובי */
+    font-weight: bold;
+    margin-top: 10px;
+}
+/* הקונטיינר הראשי: סרגל צד + גריד */
+.page-wrapper {
+    display: flex;
+    gap: 30px; /* מרווח בין הסרגל לגריד */
+    padding: 20px;
+    max-width: 1200px; /* מגביל את הרוחב המקסימלי במרכז */
+    margin: 30px auto; /* ממקם את הכל במרכז הדף */
+}
+
+/* סרגל הצד */
+.filter-sidebar {
+    flex: 0 0 80px; /* קובע רוחב קבוע לסרגל הצד */
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    height: fit-content; /* שהצד יתפוס רק את גובה התוכן שלו */
+}
+
+
+
+/* עיצוב כרטיס המשתמש */
+.user-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+.User-button {
+    display: block; 
+    margin-top: 15px;
+    text-align: center;
+    padding: 10px;
+    background-color: #0077b6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.User-button:hover {
+    background-color: #005f87;
+}
+@media (max-width: 708px){
+     
+   .page-wrapper {
+      flex-direction: column;
+    }
+    .filter-sidebar {
+      width: 100%;
+      max-width: none;
+      margin-bottom: 20px;
+      position: static;
+    }
+
+}

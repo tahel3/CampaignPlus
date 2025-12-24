@@ -1,0 +1,78 @@
+.contribution-history {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 15px;
+    background: #fdfdfd;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    font-family: 'Arial', sans-serif;
+    direction: rtl;
+    text-align: right;
+}
+
+.contribution-entry {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 12px 0;
+}
+
+.contribution-entry:last-child {
+    border-bottom: none;
+}
+
+.contribution-campaign {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.contribution-amount {
+    color: #009688;
+    margin: 4px 0;
+    font-weight: bold;
+}
+
+.contribution-date {
+    color: #666;
+    font-size: 14px;
+}
+#filter-date {
+  width: 150px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  margin-right: 10px;
+}
+
+/* כפתורי סינון */
+.btn-primary {
+  background: #ff8800;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-right: 8px;
+}
+
+.btn-primary:hover {
+  background: #ff6f61;
+}
+
+.btn-reset {
+  background: #777;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-reset:hover {
+  background: #555;
+}

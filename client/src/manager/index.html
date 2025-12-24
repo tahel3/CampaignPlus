@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campaign+ - בית</title>
+  <link rel="stylesheet" href="../main/index.css">
+  <link rel="stylesheet" href="./campaigns/main.campaigns.css">
+  <script type="module" src="../main/index.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false" type="button">
+        &#9776; </button>
+    <div class="logo">
+      <img src="http://localhost:3000/images/לוגו%20נבחר.png" alt="Campaign+ Logo">
+      <h1>Campaign+</h1>
+    </div>
+    <nav class="nav open" id="main-nav">
+      <a href="../index.html" target="_self" rel="noopener noreferrer">חזרה לאזור לקוח </a>
+      <a href="./users/users.html" target="_self" rel="noopener noreferrer">צפייה במשתמשים</a>
+      <a href="./addCampaign/addCampaign.html" target="_self" rel="noopener noreferrer">קמפיין חדש</a>
+      <a href="./details/details.html" target="_self" rel="noopener noreferrer">נתונים</a>
+      <a href="./login/login.html" id="login" target="_self" rel="noopener noreferrer">התחברות</a>
+      <a href="./categories/categories.html" target="_self" rel="noopener noreferrer">ניהול קטגוריות</a>
+      <a href="#" id="logout" style="display:none;" target="_self" rel="noopener noreferrer">התנתקות</a>
+    
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>יחד נציל חיים</h2>
+    <p>הצטרף לקהילה של אנשים שעוזרים לחולים ולמשפחותיהם להתמודד עם אתגרים רפואיים</p>
+    <a href="./addCampaign/addCampaign.html" class="btn-primary">צור קמפיין חדש</a>
+  </section>
+  <div class="page-wrapper">
+    <aside class="filter-sidebar">
+      <h3>🔎 סינון לפי קטגוריות</h3>
+      <p>בחר/י קטגוריה אחת או יותר:</p>
+      <div class="category-filter">
+        <select id="categorySelect" multiple></select>
+      </div>
+      <button id="clearCategories" type="button" class="clear-btn">נקה בחירה</button>
+                <h3>🔎 סינון לפי שם</h3>
+    <input type="text" id="filterName" placeholder="הקלד שם קמפיין...">
+      <h3>🔎קמפיינים פעילים </h3>
+    <input type="checkbox" id="isOpen-filter" checked>
+    <label for="isOpen-filter">הצג רק קמפיינים פעילים</label>
+    </aside>
+  <main class="content-area campaigns-grid" id="campaigns">
+    </main>
+</div>  
+  <footer class="footer">
+    <p>© 2025 Campaign+ - כל הזכויות שמורות</p>
+  </footer>
+
+  <script type="module" src="./campaigns/main.campaigns.js" defer></script>
+</body>
+
+</html>
