@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import express, { json, urlencoded } from 'express'
 import morgan from 'morgan'
 import cors from 'cors';
@@ -15,25 +16,25 @@ import { Readable } from 'stream';
 import uploadRouter from './routers/upload.routers.js';
 import { createServer } from 'http';
 import { Server } from "socket.io";
-
+const clientUrl = process.env.CLIENT_URL || 'http://localhost:5173';
 
 config();
 const app = express();
 const server = createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:5173", // שנה לכתובת ה-Frontend שלך
+        origin: clientUrl,
         methods: ["GET", "POST"]
     }
 });
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 
 connectDB('campaignsDB'); // 1. חיבור למסד נתונים
 
 // 2. הגדרת Middleware
 app.use(morgan("dev"));
-app.use(cors({ 'origin': 'http://localhost:5173' }));
+app.use(cors({ 'origin': clientUrl }));
 app.use(json());
 app.use(urlencoded({ extended: true }));
 app.use(express.static('public'));
